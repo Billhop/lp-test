@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Layout, Row, Col } from 'antd';
+import logo from './assets/billhop-logo.svg';
+import './App.less';
+const { Header, Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout style={{minHeight: "100vh"}}>
+    <Header className="header">
+      <div className="logo">
+        <img src={logo} alt="Logo" />
+      </div>
+    </Header>
+    <Row justify="center">
+      <Col span={20}>
+        <Content className="App">
+          Your empty canvas 🧑‍🎨
+        </Content>
+      </Col>
+    </Row>
+    </Layout>
   );
 }
 
